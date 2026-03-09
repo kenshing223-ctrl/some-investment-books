@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#111827" />
+    <title>Focus Flow</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Focus Flow</h1>
+        <p>Simple focus timer built for iPhone.</p>
+      </header>
+
+      <section class="timer-card" aria-live="polite">
+        <div class="mode" id="modeLabel">Focus</div>
+        <div class="time" id="timeDisplay">25:00</div>
+        <div class="controls">
+          <button id="startPauseBtn">Start</button>
+          <button id="resetBtn" class="secondary">Reset</button>
+          <button id="switchBtn" class="secondary">Switch</button>
+        </div>
+      </section>
+
+      <section class="quick-settings">
+        <label>
+          Focus (min)
+          <input id="focusInput" type="number" min="1" max="120" value="25" />
+        </label>
+        <label>
+          Break (min)
+          <input id="breakInput" type="number" min="1" max="60" value="5" />
+        </label>
+      </section>
+
+      <section class="task-card">
+        <h2>Top Task</h2>
+        <form id="taskForm">
+          <input id="taskInput" type="text" placeholder="What matters most right now?" maxlength="120" />
+          <button type="submit">Save</button>
+        </form>
+        <p id="savedTask">No task set.</p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
